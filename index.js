@@ -15,12 +15,10 @@ select1.addEventListener("change",runOne);
 select2.addEventListener("change",runTwo);
 
 function runOne() {
-    select1.style.backgroundImage ="initial";
-    select1.style.backgroundColor = "#833AE0";
-    select1.style.color = "white";
+    select1.classList.add("selectStyle");
+
     for(let i=1;i<=4;i++) {
-         currencisesOne[i-1].style.backgroundColor ="white";
-         currencisesOne[i-1].style.color ="#C6C6C6";
+         currencisesOne[i-1].classList.remove("defaultCurrencyRemove");
     }
     altvalueChange(select1.value,1);
     let type =1;
@@ -29,12 +27,9 @@ function runOne() {
 }
 
 function runTwo() {
-    select2.style.backgroundImage ="initial";
-    select2.style.backgroundColor = "#833AE0";
-    select2.style.color = "white";
+    select2.classList.add("selectStyle");
     for(let i=1;i<=4;i++) {
-        currencisesTwo[i-1].style.backgroundColor ="white";
-        currencisesTwo[i-1].style.color ="#C6C6C6";
+        currencisesTwo[i-1].classList.remove("defaultCurrencyRemove");
     }
     altvalueChange(select2.value,2);
     let type =2;
@@ -53,19 +48,15 @@ for(let i=0;i<currencisesOne.length;i++) {
 
 function selectionOne (evt) {
    evt.preventDefault();
-   event.target.style.backgroundColor = "#833AE0";
-   event.target.style.color = "white";
-
-   
+   event.target.classList.add("defaultCurrency");
+ 
    for(let i=1;i<=4;i++) {
        if(Number(event.target.id)!=i) {
-        currencisesOne[i-1].style.backgroundColor ="white";
-        currencisesOne[i-1].style.color ="#C6C6C6";
+        currencisesOne[i-1].classList.add("defaultCurrencyRemove");
        }
    }
-    select1.style.backgroundImage = "url(images/arrowIcon.png)";
-    select1.style.backgroundColor = "white";
-    select1.style.color = "black";
+    select1.classList.add("selectStyleRemove");
+
     select1.value ="";
     
     
@@ -81,20 +72,16 @@ function selectionOne (evt) {
 
 function selectionTwo (evt) {
     evt.preventDefault();
-    event.target.style.backgroundColor = "#833AE0";
-    event.target.style.color = "white";
+    event.target.classList.add("defaultCurrency");
   
     
     for(let i=1;i<=4;i++) {
         if(Number(event.target.id)!=i) {
-            currencisesTwo[i-1].style.backgroundColor ="white";
-            currencisesTwo[i-1].style.color ="#C6C6C6";
+            currencisesTwo[i-1].classList.add("defaultCurrencyRemove");
         }
     }
 
-    select2.style.backgroundImage = "url(images/arrowIcon.png)";
-    select2.style.backgroundColor = "white";
-    select2.style.color = "black";
+    select2.classList.add("selectStyleRemove");
     select2.value ="";
 
     let target = event.target.textContent;
