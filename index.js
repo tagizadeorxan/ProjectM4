@@ -161,8 +161,8 @@ let second = 0;
      else { 
         // inputnumberone.addEventListener("input",calculateCurrencyeventOne);
         // inputnumbertwo.addEventListener("input",calculateCurrencyeventTwo);
-        inputnumberone.addEventListener("keypress",calculateCurrencyeventOne);
-        inputnumbertwo.addEventListener("keypress",calculateCurrencyeventTwo);
+        inputnumberone.addEventListener("input",calculateCurrencyeventOne);
+        inputnumbertwo.addEventListener("input",calculateCurrencyeventTwo);
         
         fetch(`https://api.ratesapi.io/api/latest?base=${firstCurrency}&symbols=${secondCurrency}`,{ 
     method: "GET",
