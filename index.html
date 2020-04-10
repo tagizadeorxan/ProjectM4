@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+	
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project M4_1</title>
+  <link href="style.css" rel="stylesheet">
+  
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+
+<body id="body">
+  <div id="content">
+  <header>
+    <nav class="navbar">
+      <img src="images/Icon.png"></img>
+      <div class="link">
+        <a href="#bank">БАНК</a>
+        <a href="#business">БИЗНЕС</a>
+        <a href="#invest">ИНВЕСТИЦИИ</a>
+        <a href="#insurance">СТРАХОВАНИЕ</a>
+        <a href="#mobile">МОБАЙЛ</a>
+        <a href="#travel">ПУТЕШЕСТВИЯ</a>
+        <a href="#entertainment">РАЗВЛЕЧЕНИЯ</a>
+      </div>
+      <button class="enter">ВОЙТИ</button>
+    </nav>
+  </header>
+
+  <div class="main">
+    <span class="maintext">Конвертер валют онлайн</span>
+    <div class="currency">
+      <div class="container-1">
+        <p>У меня есть</p>
+        <div id="currencies-1" class="currencies">
+          <span id="1"class="select firstEdit">RUB</span>
+          <span id="2" class="select">USD</span>
+          <span id="3"class="select">EUR</span>
+          <span id="4"class="select" style="border-right: 0;">GBP</span>
+          <select id="select1"class="option">
+            <option disabled selected value></option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="DKK">DKK</option>
+            <option value="INR">INR</option>
+            <option value="CHF">CHF</option>
+            <option value="MXN">MXN</option>
+            <option value="CZK">CZK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="HRK">HRK</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="CNY">CNY</option>
+            <option value="BGN">BGN</option>
+            <option value="PHP">PHP</option>
+            <option value="SEK">SEK</option>
+            <option value="PLN">PLN</option>
+            <option value="ZAR">ZAR</option>
+            <option value="CAD">CAD</option>
+            <option value="ISK">ISK</option>
+            <option value="BRL">BRL</option>
+            <option value="RON">RON</option>
+            <option value="NZD">NZD</option>
+            <option value="TRY">TRY</option>
+            <option value="JPY">JPY</option>
+            <option value="RUB">RUB</option>
+            <option value="KRW">KRW</option>
+            <option value="USD">USD</option>
+            <option value="HUF">HUF</option>
+            <option value="AUD">AUD</option>
+          </select>
+        </div>
+        <div id="number-1" class="number">
+          <input id="input-number-1"class="number-up" type="number"></span>
+          <span id="number-1-value" class="number-down">1 <span id="1th">currency</span> = <span id="calculate1">1</span> <span id="2th">currency</span></span>
+        </div>
+      </div>
+      <img id="button" class="displaying" src="images/button.png">
+      <div class="container-2">
+        <p>Хочу приобрести</p>
+        <div id="currencies-2"class="currencies">
+          <span id="1" class="select firstEdit" >RUB</span>
+          <span id="2"class="select">USD</span>
+          <span id="3"class="select">EUR</span>
+          <span id="4" class="select" style="border-right: 0">GBP</span>
+          <select id="select2" class="option">
+            <option disabled selected value></option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="DKK">DKK</option>
+            <option value="INR">INR</option>
+            <option value="CHF">CHF</option>
+            <option value="MXN">MXN</option>
+            <option value="CZK">CZK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="HRK">HRK</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="CNY">CNY</option>
+            <option value="BGN">BGN</option>
+            <option value="PHP">PHP</option>
+            <option value="SEK">SEK</option>
+            <option value="PLN">PLN</option>
+            <option value="ZAR">ZAR</option>
+            <option value="CAD">CAD</option>
+            <option value="ISK">ISK</option>
+            <option value="BRL">BRL</option>
+            <option value="RON">RON</option>
+            <option value="NZD">NZD</option>
+            <option value="TRY">TRY</option>
+            <option value="JPY">JPY</option>
+            <option value="RUB">RUB</option>
+            <option value="KRW">KRW</option>
+            <option value="USD">USD</option>
+            <option value="HUF">HUF</option>
+            <option value="AUD">AUD</option>
+          </select>
+        </div>
+        <div id="number-2" class="number">
+          <input id="input-number-2" class="number-up" type="number"></span>
+          <span id="number-2-value" class="number-down">1 <span id="3th">currency</span> = <span id="calculate2">1</span> <span id="4th">currency</span></span>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+  <div id="loading"class="show"><p>Loading</p></div>
+  
+  <script src="dist/main.minified.js"></script>
+
+
+
+</body>
+
+
+</html>
