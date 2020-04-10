@@ -3,7 +3,7 @@
 
 <head>
 
-
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
 	
   <meta charset="UTF-8">
@@ -35,14 +35,14 @@
 
   <div class="main">
     <span class="maintext">Конвертер валют онлайн</span>
-    <div class="currency">
+    <div id="currency" class="currency">
       <div class="container-1">
         <p>У меня есть</p>
         <div id="currencies-1" class="currencies">
-          <span id="1"class="select firstEdit">RUB</span>
-          <span id="2" class="select">USD</span>
-          <span id="3"class="select">EUR</span>
-          <span id="4"class="select" style="border-right: 0;">GBP</span>
+          <span id="1"class="select firstEdit" value="RUB">RUB</span>
+          <span id="2" class="select" value="USD">USD</span>
+          <span id="3"class="select" value="EUR">EUR</span>
+          <span id="4"class="select" value="GBP" style="border-right: 0;">GBP</span>
           <select id="select1"class="option">
             <option disabled selected value></option>
             <option value="EUR">EUR</option>
@@ -89,10 +89,10 @@
       <div class="container-2">
         <p>Хочу приобрести</p>
         <div id="currencies-2"class="currencies">
-          <span id="1" class="select firstEdit ">RUB</span>
-          <span id="2"class="select">USD</span>
-          <span id="3"class="select">EUR</span>
-          <span id="4" class="select" style="border-right: 0">GBP</span>
+          <span id="1" class="select firstEdit " value="RUB">RUB</span>
+          <span id="2"class="select" value="USD">USD</span>
+          <span id="3"class="select" value="EUR">EUR</span>
+          <span id="4" class="select" value="GBP" style="border-right: 0">GBP</span>
           <select id="select2" class="option">
             <option disabled selected value></option>
             <option value="EUR">EUR</option>
@@ -142,7 +142,7 @@
 </div>
   <button id="loading"class="hide">Loading</button>
   
-  <script src="dist/main.minified.js"></script>
+  <script src="index.js"></script>
 
 
 
