@@ -218,18 +218,6 @@ input {
 }
 
 
-.selectStyle {
-background-image:initial;
-background-color: #833AE0;
-color:white;
-}
-
-.selectStyleRemove {
-  background-image:"url(images/arrowIcon.png)";
-  background-color:white;
-  color:black;
-  
-}
 
 
 .defaultCurrency {

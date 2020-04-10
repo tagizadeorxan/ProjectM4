@@ -1,4 +1,17 @@
-var gi = require(`gitignore`);
+// var gi = require(`gitignore`);
+
+
+window.onload = function(){
+    //auto select first one
+    let defaults = document.querySelector('.firstEdit');
+     defaults.addEventListener("click",this.selectionOne);
+     defaults.click();
+    //auto select second one
+    let defaultTwo = document.querySelector("#currencies-2> span:nth-child(2)")
+    defaultTwo.addEventListener("click",this.selectionTwo);
+    defaultTwo.click();
+}
+
 
 
 let currencisesOne = document.querySelectorAll("#currencies-1 > .select");
@@ -15,10 +28,13 @@ select1.addEventListener("change",runOne);
 select2.addEventListener("change",runTwo);
 
 function runOne() {
-    select1.classList.add("selectStyle");
-
+    select1.style.backgroundImage ="initial";
+    select1.style.backgroundColor = "#833AE0";
+    select1.style.color = "white";
     for(let i=1;i<=4;i++) {
-         currencisesOne[i-1].classList.remove("defaultCurrencyRemove");
+         currencisesOne[i-1].style.backgroundColor ="white";
+         currencisesOne[i-1].style.color ="#C6C6C6";
+         currencisesOne[i-1].style.border ="1px solid #C6C6C6";
     }
     altvalueChange(select1.value,1);
     let type =1;
@@ -27,9 +43,13 @@ function runOne() {
 }
 
 function runTwo() {
-    select2.classList.add("selectStyle");
+    select2.style.backgroundImage ="initial";
+    select2.style.backgroundColor = "#833AE0";
+    select2.style.color = "white";
     for(let i=1;i<=4;i++) {
-        currencisesTwo[i-1].classList.remove("defaultCurrencyRemove");
+        currencisesTwo[i-1].style.backgroundColor ="white";
+        currencisesTwo[i-1].style.color ="#C6C6C6";
+        currencisesTwo[i-1].style.border ="1px solid #C6C6C6";
     }
     altvalueChange(select2.value,2);
     let type =2;
@@ -48,15 +68,21 @@ for(let i=0;i<currencisesOne.length;i++) {
 
 function selectionOne (evt) {
    evt.preventDefault();
-   event.target.classList.add("defaultCurrency");
- 
+   event.target.style.backgroundColor = "#833AE0";
+   event.target.style.color = "white";
+   event.target.style.border = "1px solid #833AE0"
+
+   
    for(let i=1;i<=4;i++) {
        if(Number(event.target.id)!=i) {
-        currencisesOne[i-1].classList.add("defaultCurrencyRemove");
+        currencisesOne[i-1].style.backgroundColor ="white";
+        currencisesOne[i-1].style.color ="#C6C6C6";
+        currencisesOne[i-1].style.border ="1px solid #C6C6C6";
        }
    }
-    select1.classList.add("selectStyleRemove");
-
+    select1.style.backgroundImage = "url(images/arrowIcon.png)";
+    select1.style.backgroundColor = "white";
+    select1.style.color = "black";
     select1.value ="";
     
     
@@ -72,16 +98,21 @@ function selectionOne (evt) {
 
 function selectionTwo (evt) {
     evt.preventDefault();
-    event.target.classList.add("defaultCurrency");
-  
+    event.target.style.backgroundColor = "#833AE0";
+    event.target.style.color = "white";
+    event.target.style.border = "1px solid #833AE0"
     
     for(let i=1;i<=4;i++) {
         if(Number(event.target.id)!=i) {
-            currencisesTwo[i-1].classList.add("defaultCurrencyRemove");
+            currencisesTwo[i-1].style.backgroundColor ="white";
+            currencisesTwo[i-1].style.color ="#C6C6C6";
+            currencisesTwo[i-1].style.border ="1px solid #C6C6C6";
         }
     }
 
-    select2.classList.add("selectStyleRemove");
+    select2.style.backgroundImage = "url(images/arrowIcon.png)";
+    select2.style.backgroundColor = "white";
+    select2.style.color = "black";
     select2.value ="";
 
     let target = event.target.textContent;
@@ -208,3 +239,6 @@ let second = 0;
 },1000);
 setTimeout(showPage,1000);
 }
+
+
+converter(1);
