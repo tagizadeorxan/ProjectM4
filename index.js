@@ -168,17 +168,37 @@ function converter(type) {
 
         fetch(`https://api.ratesapi.io/api/latest?base=${firstCurrency}&symbols=${secondCurrency}`, {
             method: "GET",
-        }).then(data => data.json()).then((data) => {
+        }).then((data) => {
+            if (data.ok) {
+                return data.json();
+              } else {
+                throw new Error('Something went wrong');
+              }
+            })
+            
+            
+            .then((data) => {
             first = data.rates[secondCurrency];
             document.getElementById("calculate1").textContent = data.rates[secondCurrency];
-        });
+        }).catch((error) => {
+            console.log(error)
+          });
 
         fetch(`https://api.ratesapi.io/api/latest?base=${secondCurrency}&symbols=${firstCurrency}`, {
             method: "GET",
-        }).then(data => data.json()).then((data) => {
+        }).then((data) => {
+            if (data.ok) {
+                return data.json();
+              } else {
+                throw new Error('Something went wrong');
+              }
+            })
+            .then((data) => {
             second = data.rates[firstCurrency];
             document.getElementById("calculate2").textContent = data.rates[firstCurrency];
-        });
+        }).catch((error) => {
+            console.log(error)
+          });
 
 
         if (type === 1) {
