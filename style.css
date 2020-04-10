@@ -1,7 +1,7 @@
 body{
   font-family: 'Roboto', sans-serif;
   margin: auto;
-  
+
 
 }
 .navbar {
@@ -12,6 +12,7 @@ body{
     display: inline-block;
     float: none;
     text-align: center;
+
   }
   img {
     float: left;
@@ -27,6 +28,7 @@ body{
     text-decoration: none;
     font-size: 13.5px;
     margin-left: 5px;
+   
   }
 
   .link {
@@ -198,19 +200,24 @@ input {
 }
 
 .show {
+ 
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  top: 32%;
+  margin-left: 833px;
+  margin-bottom: 200px;
+  margin-top: 55px;
   width: 129px;
   height: 54px;
-  background: white;
-  border: 1px solid black;
+  background: lightgray;
+  border: 1px solid lightgray;
   justify-content: center;
   border-radius: 5px;
+  font-size: 24px;
+  -webkit-appearance: button;
 }
+
+
 
 
 
